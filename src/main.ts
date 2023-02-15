@@ -18,23 +18,19 @@
 
 
 let twoSum = (nums: number[], target: number): number[] => {
-    let result: number[] = []
-    nums.forEach((number, index) => {
+    for (let i = 0; i < nums.length; i++) {
         let newArray = nums.slice();
-        newArray.splice(index, 1)
-        if (newArray.includes(target - number)) {
+        newArray.splice(i, 1)
+        if (newArray.includes(target - nums[i])) {
             console.log(newArray)
-            if (target - number==number) {
-                result = [index, nums.indexOf(target - number,index)]
-                console.log("aaa")
-                return false;
+            if (target - nums[i] == nums[i]) {
+                return [i, nums.indexOf(target - nums[i], i + 1)]
             } else {
-                result = [index, nums.indexOf(target - number)]
-                return false;
+                return [i, nums.indexOf(target - nums[i])]
             }
         }
-    })
-    return result
+    }
+    return []
 }
 
 // Testing
