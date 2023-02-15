@@ -18,16 +18,26 @@
 
 
 let twoSum = (nums: number[], target: number): number[] => {
-    // let newArray;
+    let result: number[] = []
     nums.forEach((number, index) => {
         let newArray = nums.slice();
         newArray.splice(index, 1)
+        if (newArray.includes(target - number)) {
+            console.log(newArray)
+            if (target - number==number) {
+                result = [index, nums.indexOf(target - number,index)]
+                console.log("aaa")
+                return false;
+            } else {
+                result = [index, nums.indexOf(target - number)]
+                return false;
+            }
+        }
     })
-    return []
-
+    return result
 }
 
 // Testing
-console.log(twoSum([2, 7, 11, 15], 9)) //[0,1]
+// console.log(twoSum([2, 7, 11, 15], 9)) //[0,1]
 // console.log(twoSum([3, 2, 4], 6)) //[1,2]
-// console.log(twoSum([3, 3], 6)) //[0,1]
+console.log(twoSum([3, 3], 6)) //[0,1]
