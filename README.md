@@ -48,13 +48,14 @@ tsc --watch
 
  - [Two Sum - Leetcode](https://leetcode.com/problems/two-sum/)
  
-## To Improve
 
-It looks like there's room for improvement in my code, but I'm eager to work on it and make it even better!
- 
- 
- <p align="center">
-  <img src="img/Leetcode1.png" alt="Performance" title="Performance Chart">
+
+
+## Lessons Learned
+
+Persistence pays off, I had to use brute force to solve the problem initially in order to understand it and then create a solution. Although it was difficult, building step by step helped me arrive at the solution.
+
+<p align="center">
+  <img src="img/Leetcode2.png" alt="Performance" title="Performance Chart">
 </p>
-
 
